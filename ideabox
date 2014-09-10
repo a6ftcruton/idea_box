@@ -1,8 +1,8 @@
 ---
 ideas:
-- title: first idea
-  description: editing first time
-- title: second idea
-  description: editing first time for second idea
-- title: dwarves
-  description: in the sock drawer
+- :title: first idea
+  :description: first idea desc
+- :title: second
+  :description: second description
+- :title: ef
+  :description: ff

@@ -1,14 +1,24 @@
+require 'yaml/store'
 require './idea'
 
 class IdeaBoxApp < Sinatra::Base
+
   set :method_override, true
+
+  configure :development do
+    register Sinatra::Reloader
+  end
+
+  not_found do
+    erb :not_found
+  end
 
   get '/' do
     erb :index, locals: {ideas: Idea.all}
   end
 
   post '/' do
-    idea = Idea.new(params[:idea])
+    idea = Idea.new(params['idea_title'], params['idea_description'])
     idea.save
     redirect '/'
   end
@@ -20,15 +30,16 @@ class IdeaBoxApp < Sinatra::Base
 
   get '/:id/edit' do |id|
     idea = Idea.find(id.to_i)
-    erb :edit, locals: {idea_id: id, idea: idea}
+    erb :edit, locals: {id: id, idea: idea}
   end
 
   put '/:id' do |id|
-    Idea.update(id.to_i, params[:idea])
+    data = {
+      :title => params['idea_title'],
+      :description => params['idea_description']
+    }
+    Idea.update(id.to_i, data)
     redirect '/'
   end
 
-  not_found do
-    erb :error
-  end
 end
