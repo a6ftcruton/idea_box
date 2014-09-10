@@ -1,10 +1,11 @@
 ---
 ideas:
-- title: 'first idea '
-  description: ok so far
-  rank: 3
 - title: hack
   description: the planetssss
   rank: 7
 - title: nap
   description: going to be great
+  rank: 1
+- title: started
+  description: as a baby
+  rank: 3

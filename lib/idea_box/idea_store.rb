@@ -55,5 +55,4 @@ class IdeaStore
       database['ideas'] << data
     end
   end
-
 end

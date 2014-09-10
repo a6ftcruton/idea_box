@@ -1,7 +1,5 @@
 require 'yaml/store'
 require 'idea_box'
-# require './idea'
-# require './idea_store'
 
 class IdeaBoxApp < Sinatra::Base
   set :method_override, true
@@ -45,5 +43,4 @@ class IdeaBoxApp < Sinatra::Base
     IdeaStore.update(id.to_i, idea.to_h)
     redirect '/'
   end
-
 end
