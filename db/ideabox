@@ -1,14 +1,10 @@
 ---
 ideas:
-- :title: newest idea 66
-  :description: aw yearsssssh!
-- title: first
-  description: first description
-- title: halloween
-  description: paint your faces
-- title: twelve
-  description: monthsz
+- title: 'first idea '
+  description: ok so far
+  rank: 3
 - title: hack
-  description: da planetssss
-- title: idas
-  description: idears
+  description: the planetssss
+  rank: 7
+- title: nap
+  description: going to be great
